@@ -33,4 +33,4 @@ RUN mkdir "$HAXELIB_PATH" && haxelib setup "$HAXELIB_PATH" \
 WORKDIR /var/www/html
 
 EXPOSE 80
-CMD apachectl start && haxelib run tora
+CMD apachectl restart && haxelib run tora

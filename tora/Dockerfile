@@ -4,11 +4,10 @@ FROM ubuntu:trusty
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y python-software-properties software-properties-common \
 	&& add-apt-repository ppa:haxe/releases -y \
-	&& add-apt-repository ppa:haxe/snapshots -y \
 	&& apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
 		apache2 \
 		neko-dev \
-		haxe=1:3.2.1* \
+		haxe \
 	&& rm -r /var/lib/apt/lists/*
 
 RUN rm -rf /var/www/html \
